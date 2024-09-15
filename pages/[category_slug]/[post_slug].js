@@ -14,7 +14,8 @@ import CommentsModal from './CommentsModal';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const PostPage = ({ post }) => {
+const PostPage = () => {
+  const [post, setPost] = useState(null);
   const [likeCount, setLikeCount] = useState(0);
   const [isLikedByUser, setIsLikedByUser] = useState(false);
   const [commentCount, setCommentCount] = useState(0);
