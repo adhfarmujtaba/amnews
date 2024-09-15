@@ -437,6 +437,7 @@ const PostPage = ({ post }) => {
     </>
   );
 };
+
 export async function getServerSideProps({ params }) {
   const { post_slug } = params;
 
@@ -460,5 +461,6 @@ export async function getServerSideProps({ params }) {
     };
   }
 }
+
 
 export default PostPage;
