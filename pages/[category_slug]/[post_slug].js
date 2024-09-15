@@ -439,15 +439,9 @@ const PostPage = ({ post }) => {
 export async function getServerSideProps({ params }) {
   const { post_slug } = params;
 
-  console.log('Received params:', params); // Debugging: log the received params
-
   try {
     // Fetch the post based on the slug from params
-    console.log('Fetching post with slug:', post_slug); // Debugging: log the slug being used for fetching
-
     const post = await fetchPostBySlug(post_slug);
-
-    console.log('Fetched post data:', post); // Debugging: log the fetched post data
 
     // Return the post data as props
     return {
@@ -456,7 +450,7 @@ export async function getServerSideProps({ params }) {
       }
     };
   } catch (error) {
-    console.error('Error fetching post:', error); // Debugging: log the error
+    console.error('Error fetching post:', error);
 
     return {
       props: { 
